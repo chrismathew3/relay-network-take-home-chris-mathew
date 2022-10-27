@@ -47,7 +47,7 @@ const VoterPageTable = () => {
   return (
     <TableContainer m="2rem">
       <Table variant="simple">
-        <TableCaption>Imperial to metric conversion factors</TableCaption>
+        <TableCaption>Philadelphia Qualified Voter Listing 2018</TableCaption>
         <Thead>
           <Tr>
             {fields.map((field) => (
