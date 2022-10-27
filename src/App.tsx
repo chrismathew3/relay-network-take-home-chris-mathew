@@ -1,10 +1,8 @@
-import VoterPage from './VoterPage'
+import React from "react";
+import VoterPage from "./VoterPage";
 
-function App() {
+const App = () => {
+  return <VoterPage />;
+};
 
-  return (
-   <VoterPage/>
-  )
-}
-
-export default App
+export default App;

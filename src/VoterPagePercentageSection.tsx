@@ -1,3 +1,4 @@
+import React from "react";
 import { Heading, Box, Spinner } from "@chakra-ui/react";
 import useVoterStats from "./hooks/useVoterStats";
 import useVoterPage from "./useVoterPage";
@@ -19,26 +20,24 @@ const VoterPagePercentageSection: React.FC = () => {
 
   const segmentName = "dem";
   const totalVoterCount = rows
-    .map((row: any) => {
+    ?.map((row: any) => {
       return row["total"];
     })
-    .reduce((prev: number, curr: number) => prev + curr, 0);
+    ?.reduce((prev: number, curr: number) => prev + curr, 0);
   const voterCount = rows
-    .map((row: any) => {
+    ?.map((row: any) => {
       return row[segmentName];
     })
-    .reduce((prev: number, curr: number) => prev + curr, 0);
-  const voterPercentage = ((voterCount / totalVoterCount) * 100).toFixed(2);
+    ?.reduce((prev: number, curr: number) => prev + curr, 0);
+  const voterPercentage = ((voterCount / totalVoterCount) * 100)?.toFixed(2);
   const currentVoterCount = rows
-    .map((row: any) => {
+    ?.map((row: any) => {
       return row[currentSegmentName];
     })
-    .reduce((prev: number, curr: number) => prev + curr, 0);
-  const currentVoterPercentage = ((currentVoterCount / totalVoterCount) * 100).toFixed(2);
+    ?.reduce((prev: number, curr: number) => prev + curr, 0);
+  const currentVoterPercentage = ((currentVoterCount / totalVoterCount) * 100)?.toFixed(2);
 
-  // tmp.map((da) => { return da['white']}).reduce((prev, curr) => prev + curr, 0);
 
-  console.log(rows);
   return (
     <Box display={"flex"} flexDirection="row" justifyContent={"space-between"}>
       <Heading size={"sm"} m="2rem">

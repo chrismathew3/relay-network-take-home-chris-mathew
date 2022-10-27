@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Spinner,
   Table,
@@ -27,22 +28,22 @@ const VoterPageTable = () => {
   }
 
   const rows = data?.data?.rows;
-  const fields = Object.keys(data?.data?.fields).filter(
+  const fields = Object?.keys(data?.data?.fields)?.filter(
     (v) => v !== "the_geom" && v !== "the_geom_webmercator" && v !== "ward"
   );
   
   const totalVoterCount = rows
-    .map((row: any) => {
+    ?.map((row: any) => {
       return row["total"];
     })
-    .reduce((prev: number, curr: number) => prev + curr, 0);
+    ?.reduce((prev: number, curr: number) => prev + curr, 0);
 
   const currentVoterCount = rows
-    .map((row: any) => {
+    ?.map((row: any) => {
       return row[currentSegmentName];
     })
-    .reduce((prev: number, curr: number) => prev + curr, 0);
-  const currentVoterPercentage = ((currentVoterCount / totalVoterCount) * 100).toFixed(2);
+    ?.reduce((prev: number, curr: number) => prev + curr, 0);
+  const currentVoterPercentage = ((currentVoterCount / totalVoterCount) * 100)?.toFixed(2);
 
   return (
     <TableContainer m="2rem">
@@ -50,19 +51,19 @@ const VoterPageTable = () => {
         <TableCaption>Philadelphia Qualified Voter Listing 2018</TableCaption>
         <Thead>
           <Tr>
-            {fields.map((field) => (
-              <Th>{field}</Th>
+            {fields?.map((field) => (
+              <Th key={field}>{field}</Th>
             ))}
             <Th>%</Th>
           </Tr>
         </Thead>
         <Tbody>
-           {rows.map((row: any) => {return (
-               <Tr>
-                   {fields.map((field) => {return (
-                       <Td>{row[field]}</Td>
+           {rows?.map((row: any) => {return (
+               <Tr key={row}>
+                   {fields?.map((field) => {return (
+                       <Td key={field}>{row[field]}</Td>
                    )})}
-                   <Td>{((row[currentSegmentName]/row['total']) * 100).toFixed(2)}</Td>
+                   <Td key="total">{((row[currentSegmentName]/row['total']) * 100)?.toFixed(2)}</Td>
                </Tr>
            )})} 
         </Tbody>
