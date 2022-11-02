@@ -3,9 +3,11 @@
 exports[`<App/> <VoterPage/> should render 1`] = `
 <div
   className="css-0"
+  id="VoterPage"
 >
   <div
     className="css-9jay18"
+    id="VoterPagePercentageSection"
   >
     <h2
       className="chakra-heading css-175t7kh"
@@ -22,6 +24,7 @@ exports[`<App/> <VoterPage/> should render 1`] = `
     >
       <select
         className="chakra-select css-1ik61og"
+        id="VoterPageSegmentDropDown"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -115,6 +118,7 @@ exports[`<App/> <VoterPage/> should render 1`] = `
   </div>
   <div
     className="chakra-table__container css-2l2gn2"
+    id="VoterPageTable"
   >
     <table
       className="chakra-table css-0"
@@ -265,12 +269,14 @@ exports[`<App/> <VoterPage/> should render 1`] = `
 </div>
 `;
 
-exports[`<VoterPage/> <VoterPagePercentageSection/> should render 1`] = `
+exports[`<VoterPage/> <VoterPage/> first tag should be be <div/> and should match snapshot 1`] = `
 <div
   className="css-0"
+  id="VoterPage"
 >
   <div
     className="css-9jay18"
+    id="VoterPagePercentageSection"
   >
     <h2
       className="chakra-heading css-175t7kh"
@@ -287,6 +293,7 @@ exports[`<VoterPage/> <VoterPagePercentageSection/> should render 1`] = `
     >
       <select
         className="chakra-select css-1ik61og"
+        id="VoterPageSegmentDropDown"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
@@ -380,6 +387,7 @@ exports[`<VoterPage/> <VoterPagePercentageSection/> should render 1`] = `
   </div>
   <div
     className="chakra-table__container css-2l2gn2"
+    id="VoterPageTable"
   >
     <table
       className="chakra-table css-0"

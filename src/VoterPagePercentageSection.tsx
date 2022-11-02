@@ -39,12 +39,12 @@ const VoterPagePercentageSection: React.FC = () => {
 
 
   return (
-    <Box display={"flex"} flexDirection="row" justifyContent={"space-between"}>
+    <Box display={"flex"} flexDirection="row" justifyContent={"space-between"} id="VoterPagePercentageSection">
       <Heading size={"sm"} m="2rem">
         {`Top Segment of All Voters: ${segmentName} - ${voterCount} - ${voterPercentage}%`}
       </Heading>
       <Heading size={"sm"} m="2rem">
-        {`Percentage of All Voters that are ${currentSegmentName} - ${currentVoterCount} - ${currentVoterPercentage}%`}
+        {`Percentage of All Voters that are ${currentSegmentName} - ${currentVoterCount } - ${currentVoterPercentage }%`}
       </Heading>
       <VoterPageSegmentDropDown />
     </Box>

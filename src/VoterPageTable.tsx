@@ -46,7 +46,7 @@ const VoterPageTable = () => {
   const currentVoterPercentage = ((currentVoterCount / totalVoterCount) * 100)?.toFixed(2);
 
   return (
-    <TableContainer m="2rem">
+    <TableContainer m="2rem" id="VoterPageTable">
       <Table variant="simple">
         <TableCaption>Philadelphia Qualified Voter Listing 2018</TableCaption>
         <Thead>
@@ -58,8 +58,8 @@ const VoterPageTable = () => {
           </Tr>
         </Thead>
         <Tbody>
-           {rows?.map((row: any) => {return (
-               <Tr key={row}>
+           {rows?.map((row: any, i: number) => {return (
+               <Tr key={i}>
                    {fields?.map((field) => {return (
                        <Td key={field}>{row[field]}</Td>
                    )})}

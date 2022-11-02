@@ -4,15 +4,12 @@ import VoterPagePercentageSection from "./VoterPagePercentageSection";
 import VoterPageTable from "./VoterPageTable";
 
 const VoterPage: React.FC = () => {
-
-
-    return (
-        <Box>
-            <VoterPagePercentageSection/>
-            <VoterPageTable/>
-        </Box>
-    )
-
-}
+  return (
+    <Box id="VoterPage">
+      <VoterPagePercentageSection/>
+      <VoterPageTable />
+    </Box>
+  );
+};
 
 export default VoterPage;

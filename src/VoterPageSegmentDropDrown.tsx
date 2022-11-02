@@ -31,6 +31,7 @@ const VoterPageSegmentDropDown: React.FC = () => {
       onChange={handleChange}
       m="2rem"
       width={'30%'}
+      id="VoterPageSegmentDropDown"
     >
       {fields?.map((field) => {
         return (
