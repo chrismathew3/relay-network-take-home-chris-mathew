@@ -27,3 +27,9 @@
 * Follow a flux pattern for state management
 
 
+## How to run
+* Install and use Node 16 or greater - use nvm if it's not already setup
+* yarn dev to run in dev mode
+* yarn test to run tests
+
+

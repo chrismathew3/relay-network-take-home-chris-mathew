@@ -32,19 +32,6 @@ const VoterPageTable = () => {
     (v) => v !== "the_geom" && v !== "the_geom_webmercator" && v !== "ward"
   );
   
-  const totalVoterCount = rows
-    ?.map((row: any) => {
-      return row["total"];
-    })
-    ?.reduce((prev: number, curr: number) => prev + curr, 0);
-
-  const currentVoterCount = rows
-    ?.map((row: any) => {
-      return row[currentSegmentName];
-    })
-    ?.reduce((prev: number, curr: number) => prev + curr, 0);
-  const currentVoterPercentage = ((currentVoterCount / totalVoterCount) * 100)?.toFixed(2);
-
   return (
     <TableContainer m="2rem" id="VoterPageTable">
       <Table variant="simple">

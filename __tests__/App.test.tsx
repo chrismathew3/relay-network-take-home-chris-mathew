@@ -150,7 +150,6 @@ describe("<VoterPage/>", () => {
     expect(
       tree.children[0].children[2].type
     ).toEqual("div");
-    console.log(tree.children[0].children[2].children[0].props.id)
     expect(
       tree.children[0].children[2].children[0].props.id
     ).toEqual("VoterPageSegmentDropDown");
